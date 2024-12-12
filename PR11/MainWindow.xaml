@@ -5,25 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PR11"
         mc:Ignorable="d"
-        Title="Практическая работа №11" Height="300" Width="500">
+        Title="Практическая работа №11" Height="300" Width="550">
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        <GroupBox Margin="5" Header="Table">
+        <GroupBox Margin="5" Header="Table" Grid.ColumnSpan="2">
             <StackPanel>
-                <ListBox x:Name="lbText" Margin="5" Height="140"/>
+                <ListBox x:Name="lbText" Margin="5"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox Header="Найти" Grid.Row="1" Margin="5">
+        <GroupBox Header="Задание 1" Grid.Row="1" Margin="5">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBox x:Name="tbText" Width="150" Margin="5"/>
                 <Button Content="Найти" Margin="5" Click="Button_Click"/>
                 <Button Content="Выход" Margin="5" Click="Button_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Задание 2" Grid.Row="1" Grid.Column="1">
+            <StackPanel >
+                <Label Content="Цифры от 3 до 7 и по краям a" HorizontalAlignment="Center"/>
+                <Button Content="Найти " Margin="5"  Click="Button_Click" HorizontalAlignment="Center"/>
             </StackPanel>
         </GroupBox>
     </Grid>
